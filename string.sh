@@ -6,12 +6,14 @@ banner() {
 	menu() {
 		banner
 		printf "\033[1;91m[\033[0m1\033[1;91m]\033[1;93m String session generate\n"
-		printf "\033[1;91m[\033[0m2\033[1;91m]\033[1;93m Exit\n\n\n"
+		printf "\033[1;91m[\033[0m2\033[1;91m]\033[1;93m Ultroid session\n"
+		printf "\033[1;91m[\033[0m3\033[1;91m]\033[1;93m Exit\n\n\n"
 		echo -e -n "\033[1;96m Select \033[0m >> "
 		read an
 		case $an in
 		1)string ;;
-		2)exit ;;
+		2)ult ;;
+		3)exit ;;
 		*)menu ;;
 		esac
 		}
@@ -68,6 +70,10 @@ banner() {
 		setup
 		fi
 		}
+ult() {
+cd ~/string
+bash .se.sh
+}
 		fg() {
 			if [ -e ~/string ];then
 			echo
